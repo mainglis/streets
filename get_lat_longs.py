@@ -25,10 +25,30 @@ def find_lats_longs(record):
         y = requests.get(
             'https://geocoder.cit.api.here.com/6.2/geocode.xml?searchtext=' + intersection_2 + '&app_id=' + here_app_id + '&app_code=' + here_app_code + '&gen=' + here_gen)
 
-        int_1_latitude = ET.fromstring(x.text).find('Response/View/Result/Location/DisplayPosition/Latitude').text
-        int_1_longitude = ET.fromstring(x.text).find('Response/View/Result/Location/DisplayPosition/Longitude').text
-        int_2_latitude = ET.fromstring(y.text).find('Response/View/Result/Location/DisplayPosition/Latitude').text
-        int_2_longitude = ET.fromstring(y.text).find('Response/View/Result/Location/DisplayPosition/Longitude').text
+        int_1_latitude_temp = ET.fromstring(x.text).find('Response/View/Result/Location/DisplayPosition/Latitude')
+        int_1_longitude_temp = ET.fromstring(x.text).find('Response/View/Result/Location/DisplayPosition/Longitude')
+        int_2_latitude_temp = ET.fromstring(y.text).find('Response/View/Result/Location/DisplayPosition/Latitude')
+        int_2_longitude_temp = ET.fromstring(y.text).find('Response/View/Result/Location/DisplayPosition/Longitude')
+
+        if int_1_latitude_temp is not None:
+            int_1_latitude = int_1_latitude_temp.text
+        else:
+            int_1_latitude = 'None'
+
+        if int_1_longitude_temp is not None:
+            int_1_longitude = int_1_longitude_temp.text
+        else:
+            int_1_longitude = 'None'
+
+        if int_2_latitude_temp is not None:
+            int_2_latitude = int_2_latitude_temp.text
+        else:
+            int_2_latitude = 'None'
+
+        if int_2_longitude_temp is not None:
+            int_2_longitude = int_2_longitude_temp.text
+        else:
+            int_2_longitude = 'None'
 
         record.extend([int_1_latitude, int_1_longitude, int_2_latitude, int_2_longitude])
         return record
@@ -36,7 +56,7 @@ def find_lats_longs(record):
         record.extend(['start_lat', 'start_long', 'stop_lat', 'stop_long'])
         return record
 
-with open('10_Long_Streets.csv', "r") as csvinput:
+with open('Street_Sweeping_Schedules.csv', "r") as csvinput:
 
     data = [row for row in csv.reader(csvinput.read().splitlines())]
     data = [find_lats_longs(x) for x in data]
