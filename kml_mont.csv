@@ -1,0 +1,16 @@
+MainID,CrossStreetMainID,Street,from,to,District,StartTime,EndTime,Side,Miles,oneway,week1,week2,week3,week4,week5,EveryDay,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,Yearround,location
+1821,974,Montgomery St,Clarendon St,West Canton St,1S,00:00.0,00:00.0,Even,0.1848,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,"<Placemark><LineString><coordinates> 42.34414, -71.07199,  42.34317, -71.07542</coordinates></LineString></Placemark>"
+1822,2119,Montgomery St,Clarendon St,West Canton St,1S,00:00.0,00:00.0,Odd,0.1848,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,"<Placemark><LineString><coordinates> 42.34317, -71.07542</coordinates></LineString></Placemark>"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
